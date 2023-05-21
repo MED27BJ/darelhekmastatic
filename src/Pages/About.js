@@ -11,4 +11,6 @@ const About = () => {
 }
 // TEST
 
+//test2
+
 export default About
