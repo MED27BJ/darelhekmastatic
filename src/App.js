@@ -11,6 +11,7 @@ import Home from './Pages/Home';
 import About from './Pages/About';
 import NotFound from './Pages/NotFound';
 import KnowMore from './components/KnowMore';
+import BookCard from './components/BookCard';
 
 function App() {
   // the declaration of the useState for the movie data
@@ -23,26 +24,26 @@ function App() {
     const [searchTitle,setSearchTitle]=useState("");
     const [searchRate,setSearchRate]=useState(0);
     
+  //   <NavBar/>
+      
+  //   <Routes>
+  //   <Route path="/movie" element={
+  //  <>
+  //  <MovieAdd setSearchTitle={setSearchTitle} setSearchRate={setSearchRate} funcAdd={handleAdd}/>
+  //  <MovieList searchTitle={searchTitle} searchRate={searchRate} movies={movies}/>
 
+  //  </> 
+  //  }/>
+    
+  //  <Route path="/" element={<Home movies={movies}/>}/>
+  //  <Route path="/about" element={<About/>}/>
+  //  <Route path="*" element={<NotFound/>}/>
+  //  <Route path="/movie/:id" element={<KnowMore movies={movies}/>}/>
+  //   </Routes> 
 
   return (
     <div className="App">
-      <NavBar/>
-      
-     <Routes>
-     <Route path="/movie" element={
-    <>
-    <MovieAdd setSearchTitle={setSearchTitle} setSearchRate={setSearchRate} funcAdd={handleAdd}/>
-    <MovieList searchTitle={searchTitle} searchRate={searchRate} movies={movies}/>
-
-    </> 
-    }/>
-     
-    <Route path="/" element={<Home movies={movies}/>}/>
-    <Route path="/about" element={<About/>}/>
-    <Route path="*" element={<NotFound/>}/>
-    <Route path="/movie/:id" element={<KnowMore movies={movies}/>}/>
-     </Routes> 
+<BookCard/>
    
     </div>
   );
