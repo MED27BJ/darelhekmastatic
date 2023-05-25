@@ -23,7 +23,7 @@ const BookCard = () => {
           </div>
   
           <div className="price">
-            89
+            {el.price}
           </div>
         </div>
   

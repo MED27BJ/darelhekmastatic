@@ -135,13 +135,13 @@ main[role="main"] {
     .price {
       width: 25%;
       float: left;
-      color: $green;
+      color: green;
       font-size: 3.5em;
       position: relative;
       margin-top: 25px;
 
       &::before {
-        content: '$';
+        content: 'TND';
         position: absolute;
         top: 0;
         left: -10px;
