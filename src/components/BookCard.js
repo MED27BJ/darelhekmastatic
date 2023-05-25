@@ -1,21 +1,24 @@
 import React from 'react'
 import "../styles/BookCard.css"
+import { useSelector } from 'react-redux'
 const BookCard = () => {
+  const bookData=useSelector((state)=>state.bookData.BookData);
+  console.log(bookData);
   return (
     <div>
+    {bookData.map((el)=>(
     <main role="main">
     <div className="product">
       <figure>
-        <img src="https://raw.githubusercontent.com/itbruno/productpreview/master/assets/img/t-shirt.jpg" alt="Product Image" className="product-image"/>
+        <img src={el.posterURL} alt="Product Image" className="product-image"/>
           </figure>
   
         <div className="product-description">
   
           <div className="info">
-            <h1>LOREM IPSUM</h1>
+            <h1>{el.title}</h1>
             <p>
-              Lorem Ipsum is simply dummy
-              printing and typesetting industry
+              {el.description}
             </p>
           </div>
   
@@ -47,6 +50,7 @@ const BookCard = () => {
         </div>
         </div>
       </main>
+  ))}
     </div>
   )
 }
