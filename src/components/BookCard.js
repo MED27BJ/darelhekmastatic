@@ -5,7 +5,7 @@ const BookCard = () => {
   const bookData=useSelector((state)=>state.bookData.BookData);
   console.log(bookData);
   return (
-    <div>
+    <div className='BookCard'>
     {bookData.map((el)=>(
     <main role="main">
     <div className="product">
@@ -17,9 +17,12 @@ const BookCard = () => {
   
           <div className="info">
             <h1>{el.title}</h1>
-            <p>
-              {el.description}
-            </p>
+            <h3>
+              {el.writer}
+            </h3>
+            <h3>
+              {el.theme}
+            </h3>
           </div>
   
           <div className="price">

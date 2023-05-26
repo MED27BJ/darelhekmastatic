@@ -269,4 +269,10 @@ main[role="main"] {
     bottom: -50px;
   }
 }
+.BookCard{
+  display: flex;
+  margin: 30px;
+  flex-wrap: wrap;
+
+}
 
