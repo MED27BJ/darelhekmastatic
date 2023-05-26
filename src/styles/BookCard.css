@@ -100,7 +100,7 @@ main[role="main"] {
 /* // Product Box
 //---------------------------------------- */
 .product {
-  background: #fff;
+  background:wheat;
   max-width: 300px;
   position: relative;
   z-index: 15;
@@ -113,7 +113,7 @@ main[role="main"] {
   .product-description {
     position: relative;
     z-index: 15;
-    background: #fff;
+    background:wheat;
     @extend %clearfix;
 
     .info {

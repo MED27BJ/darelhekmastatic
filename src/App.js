@@ -12,6 +12,7 @@ import About from './Pages/About';
 import NotFound from './Pages/NotFound';
 import KnowMore from './components/KnowMore';
 import BookCard from './components/BookCard';
+import InBag from './components/InBag';
 
 function App() {
   // the declaration of the useState for the movie data
@@ -43,6 +44,7 @@ function App() {
 
   return (
     <div className="App">
+    
 <BookCard/>
    
     </div>

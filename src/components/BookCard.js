@@ -3,7 +3,7 @@ import "../styles/BookCard.css"
 import { useSelector } from 'react-redux'
 const BookCard = () => {
   const bookData=useSelector((state)=>state.bookData.BookData);
-  console.log(bookData);
+  
   return (
     <div className='BookCard'>
     {bookData.map((el)=>(
