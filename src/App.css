@@ -5,11 +5,16 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: url(/public/filmstrip_background.jpg);
+  background-image: linear-gradient(180deg, darkgray, gray);
   background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+
 }
 .App{
   margin:0;
+
 }
 /* styling navbar header */
 .App-header{
@@ -192,3 +197,18 @@ margin-bottom: 50px;
     position: fixed;
 
   }
+  .ennavbars,.eladdmovie{
+
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+    text-decoration: none;
+    
+    
+   }
+   .eladdmovie{
+     width: 20%;
+    margin-left: auto;
+    margin-right: auto;
+   }

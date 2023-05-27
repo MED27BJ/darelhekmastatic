@@ -87,12 +87,12 @@ img {
 }
 figure {
   margin: 0;
-  line-height: 0;
+ 
 }
 
 main[role="main"] {
   max-width: 500px;
-  margin: 20px auto;
+  margin:0px auto;
   position: relative;
   @extend %clearfix;
 }
@@ -102,9 +102,10 @@ main[role="main"] {
 .product {
   background:wheat;
   max-width: 300px;
+
   position: relative;
   z-index: 15;
-  margin:0 auto;
+  margin:0;
   @include prefix(box-shadow, 0 3px 5px rgba(0,0,0,0.2));
 
   .product-image {
