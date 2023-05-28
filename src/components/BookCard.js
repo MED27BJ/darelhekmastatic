@@ -1,9 +1,12 @@
 import React from "react";
 import "../styles/BookCard.css";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import InBag from "./InBag";
+import { addBag } from "../Redux/SliceAddToBag";
 const BookCard = () => {
   const bookData = useSelector((state) => state.bookData.BookData);
-
+  const dispatch=useDispatch()
+  console.log(bookData)
   return (
     <div className="BookCard">
       {bookData.map((el) => (
@@ -36,7 +39,7 @@ const BookCard = () => {
             </div>
 
             <div className="product-sidebar">
-              <button className="buy">
+              <button className="buy" onClick={()=>(dispatch(addBag(el.id)))}>
                 <span>BUY ITEM</span>
               </button>
 

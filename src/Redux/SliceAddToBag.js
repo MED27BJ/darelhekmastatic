@@ -28,7 +28,7 @@ export const bookDataSlice = createSlice({
     addBag: (state, action) => {
       let bagTarget = state.BookData.find((el) => el.id == action.payload);
        console.log(bagTarget);
-     bagTarget.isDone = !bagTarget.isDone;
+     bagTarget.isInBag = !bagTarget.isInBag;
     
 },
 

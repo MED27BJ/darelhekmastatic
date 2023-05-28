@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 import "../styles/BookCard.css"
 const InBag = () => {
     const bookData=useSelector((state)=>state.bookData.BookData);
-  console.log(bookData)
+    
 
     return (
     <div>{bookData.filter((el)=>el.isInBag===true)
