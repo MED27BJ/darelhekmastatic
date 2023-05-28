@@ -40,25 +40,16 @@ const BookCard = () => {
 
             <div className="product-sidebar">
               <button className="buy" onClick={()=>(dispatch(addBag(el.id)))}>
-                <span>BUY ITEM</span>
+                <span>
+                📚<img src="https://emojigraph.org/media/whatsapp/shopping-cart_1f6d2.png"/>
+                  </span>
               </button>
 
               <button className="info">
-                <span>MORE INFO</span>
+                <span><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQWd8vnR4hXG4khZTuWSoQDhad6YRF_YPv5A&usqp=CAU"/> </span>
               </button>
 
-              <button className="size">
-                <span>SIZES</span>
-              </button>
-
-              <button className="colors">
-                <span>
-                  <a href="" className="color black"></a>
-                  <a href="" className="color white"></a>
-                  <a href="" className="color red"></a>
-                </span>
-              </button>
-            </div>
+              </div>
           </div>
         </main>
       ))}
