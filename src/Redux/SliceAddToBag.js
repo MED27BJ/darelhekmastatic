@@ -25,11 +25,17 @@ export const bookDataSlice = createSlice({
   initialState,
   reducers: {
     affiche:(state)=>{state.BookData=state.BookData},
+    addBag: (state, action) => {
+      let bagTarget = state.BookData.find((el) => el.id == action.payload);
+       console.log(bagTarget);
+     bagTarget.isDone = !bagTarget.isDone;
+    
+},
 
   },
 })
 
 // Action creators are generated for each case reducer function
-export const {affiche } = bookDataSlice.actions
+export const {affiche,addBag } = bookDataSlice.actions
 
 export default bookDataSlice.reducer
