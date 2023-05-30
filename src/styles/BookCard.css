@@ -91,10 +91,11 @@ figure {
 }
 
 main[role="main"] {
-  max-width: 500px;
-  margin:0px auto;
+  max-width: 300px;
+  margin:0px 50px;
   position: relative;
   @extend %clearfix;
+  padding: 25px;
 }
 
 /* // Product Box
@@ -276,4 +277,7 @@ main[role="main"] {
   flex-wrap: wrap;
 
 }
-
+.bagCard{
+  display:flex;
+  margin:10px;
+}

@@ -1,14 +1,17 @@
 import React, { useState } from 'react'
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import "../styles/BookCard.css"
+import { decrement, increment } from '../Redux/SliceAmount';
 const InBag = () => {
     const bookData=useSelector((state)=>state.bookData.BookData);
-    
-
+const amount=useSelector((state)=>state.amount.value)
+const dispatch=useDispatch();
+console.log(amount)
     return (
     <div>{bookData.filter((el)=>el.isInBag===true)
   
       .map((item) => (
+        <div className='bagCard'>
     <main role="main">
     <div className="product">
       <figure>
@@ -32,7 +35,13 @@ const InBag = () => {
           </div>
         </div>
         </div>
-      </main>))}
+      </main>
+      <div>
+      <button onClick={()=>dispatch(decrement())}>-</button>{" "}Quantity:{" "}{amount}
+      <button onClick={()=>dispatch(increment())}>+</button>{`Amount: ${amount*item.price}`}
+      </div>
+      </div>
+      ))}
     </div>
   )
 }
